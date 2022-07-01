@@ -1,0 +1,19 @@
+spring:
+  application:
+    name: example-api
+  liquibase:
+    change-log: classpath:db/changelog/db.changelog-master.xml
+    enabled: true
+
+management:
+  endpoints:
+    web:
+      base-path: /mgmt
+      exposure:
+        include: health, metrics
+
+springdoc:
+  swagger-ui:
+    enabled: false
+  api-docs:
+    enabled: false
